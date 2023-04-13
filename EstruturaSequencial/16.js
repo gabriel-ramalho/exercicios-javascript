@@ -5,5 +5,5 @@ de latas de tinta a serem compradas e o preço total.*/
 let tamanhoArea = parseInt(prompt("Qual tamanho da area a ser pintada?"))
 let quantidadeLitro = tamanhoArea / 3
 let quantidadeLatas = Math.ceil(quantidadeLitro / 18)
-console.log("Você deverá comprar: " + quantidadeLatas + "lata(s) de tinta(s)")
+console.log("Você deverá comprar: " + quantidadeLatas + " lata(s) de tinta(s)")
 console.log("Ficará no valor de: " + quantidadeLatas * 80 +" reais")
