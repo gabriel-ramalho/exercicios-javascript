@@ -25,16 +25,16 @@ while(salarioUsuario < 0){
   salarioUsuario = parseFloat(prompt("Salario:"))
 }
 
-let sexoUsuario = prompt("Sexo(F)-Feminino, (M)-Masculino:")
+let sexoUsuario = prompt("Sexo(F)-Feminino, (M)-Masculino:").toLocaleLowerCase()
 
-while(sexoUsuario != "f" && sexoUsuario != "m") {
+while(sexoUsuario !== "f" && sexoUsuario !== "m") {
   alert("Digite f ou m")
   sexoUsuario = prompt("Sexo(F)-Feminino, (M)-Masculino:") 
 }
 
-let estadoCivil = prompt("Estado civil(s, c, v ou d):")
+let estadoCivil = prompt("Estado civil(s, c, v ou d):").toLocaleLowerCase()
 
-while(estadoCivil != "s" && estadoCivil != "c" && estadoCivil != "v" && estadoCivil != "d"){
+while(estadoCivil !== "s" && estadoCivil !== "c" && estadoCivil !== "v" && estadoCivil !== "d"){
   alert("Não entendemos sua resposta")
   estadoCivil = prompt("Estado civil(s, c, v ou d):")
 }
