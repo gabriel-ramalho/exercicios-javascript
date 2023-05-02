@@ -8,6 +8,12 @@ let menor = 999999
 for(let i = 0; i < conjuntoNumero; i++){
   numero = parseInt(prompt("Digite o " + (i+1) + "º numero:"))
   soma += numero
+  if (maior === null){
+    maior = numero
+  }
+  if (menor === null){
+    menor = numero
+  }
   if (numero > maior){
    	 maior = numero
   }else {
