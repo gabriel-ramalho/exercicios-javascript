@@ -4,6 +4,10 @@ let querContinuar = prompt("Quer calcular um número fatorial? (S/N)")
 
 while(querContinuar === "s" || querContinuar ==="S"){
 	let numeroFatorial = parseInt(prompt("Digite um numero para calcular seu fatorial:"))
+    while(numeroFatorial < 0 || numeroFatorial > 16){
+        alert("[ERROR]Escolha um número entre 1 e 16")
+        numeroFatorial = parseInt(prompt("Digite um numero para calcular seu fatorial:"))
+      }
 	let numeroFinal = 1
 	let proximoNumero = 1
 	for (let i = 0; i < numeroFatorial; i++){
