@@ -13,3 +13,17 @@ Produto 3: R$ 0
 Total: R$ 9.00
 Dinheiro: R$ 20.00
 Troco: R$ 11.00 */
+let produto 
+let quantidadeProduto = 1
+let valorTotal = 0
+while(produto !== 0){
+  produto = parseFloat(prompt("Qual valor do produto "+ (quantidadeProduto)+ "?" ))
+  console.log("Produto "+quantidadeProduto+" : R$ "+ produto)
+  valorTotal+= produto
+  quantidadeProduto++
+}
+console.log("Total: R$ "+ valorTotal)
+let dinheiro = parseFloat(prompt("Digite quanto voce irá pagar:"))
+console.log("Dinheiro: R$ "+ dinheiro)
+let troco = dinheiro - valorTotal
+console.log("Troco: R$ "+ troco)
