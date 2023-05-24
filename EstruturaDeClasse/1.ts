@@ -7,10 +7,15 @@ class Bola {
         public circunferencia: number, 
         public material: string
     ){}
-    trocaCor(){}
-    mostraCor(){}
+
+    trocaCor(cor:string){
+        this.cor = cor;
+    }
+    mostraCor(cor:string){
+        return cor;
+    }
 }
-const bola = new Bola();
+const bola = new Bola("vermelho", 4, "borracha");
 console.log(bola)
 
 
