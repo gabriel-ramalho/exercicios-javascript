@@ -18,6 +18,6 @@ class Quadrado {
         return ladoQuadrado * ladoQuadrado;
     }
 }
-const bola = new Quadrado(8);
+const quadrado = new Quadrado(8);
 console.log(bola.areaQuadrado(8))
 
