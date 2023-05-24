@@ -23,7 +23,7 @@ while(produto !== 0){
   quantidadeProduto++
 }
 console.log("Total: R$ "+ valorTotal)
-let dinheiro = parseFloat(prompt("Digite quanto voce irá pagar:"))
+const dinheiro = parseFloat(prompt("Digite quanto voce irá pagar:"))
 console.log("Dinheiro: R$ "+ dinheiro)
-let troco = dinheiro - valorTotal
+const troco = dinheiro - valorTotal
 console.log("Troco: R$ "+ troco)
