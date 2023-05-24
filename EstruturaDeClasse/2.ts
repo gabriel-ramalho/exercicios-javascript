@@ -19,5 +19,5 @@ class Quadrado {
     }
 }
 const quadrado = new Quadrado(8);
-console.log(bola.areaQuadrado(8))
+console.log(quadrado.areaQuadrado(8))
 
