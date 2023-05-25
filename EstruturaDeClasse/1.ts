@@ -11,11 +11,12 @@ class Bola {
     trocaCor(cor:string){
         this.cor = cor;
     }
-    mostraCor(cor:string){
-        return cor;
+    mostraCor(){
+        return this.cor;
     }
 }
 const bola = new Bola("vermelho", 4, "borracha");
 console.log(bola)
+console.log(bola.mostraCor())
 
 
