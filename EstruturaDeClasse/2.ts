@@ -10,14 +10,14 @@ class Quadrado {
         this.ladoQuadrado = ladoQuadrado;
     }
 
-    valorDoLado(ladoQuadrado: number) {
-        return ladoQuadrado;
+    valorDoLado() {
+        return this.ladoQuadrado;
     }
 
-    areaQuadrado(ladoQuadrado: number) {
-        return ladoQuadrado * ladoQuadrado;
+    areaQuadrado() {
+        return this.ladoQuadrado * this.ladoQuadrado;
     }
 }
 const quadrado = new Quadrado(8);
-console.log(quadrado.areaQuadrado(8))
+console.log(quadrado.areaQuadrado())
 
