@@ -29,6 +29,8 @@ class Retangulo {
         return (this.base*2) + (this.altura*2);
     }
 }
-const retangulo = new Retangulo(4, 2);
-console.log(retangulo.perimetroRetangulo())
-
+const medidaBase = prompt("Qual o comprimento do cômodo?")
+const medidaAltura = prompt("Qual a largura do cômodo?")
+const retangulo = new Retangulo(medidaBase, medidaAltura);
+console.log("Irá precisar de "+ retangulo.areaRetangulo()+ " m² de piso.")
+console.log("Irá precisar de " + retangulo.perimetroRetangulo()+ "m² de rodapé.")
