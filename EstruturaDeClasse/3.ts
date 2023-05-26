@@ -4,33 +4,33 @@
 3)Crie um programa que utilize esta classe. Ele deve pedir ao usuário que informe as medidades 
 de um local. Depois, deve criar um objeto com as medidas e calcular a quantidade de pisos e 
 de rodapés necessárias para o local. */
-class Retangulo {
+class Rectangle {
     constructor(
-        public base : number,
-        public altura : number
+        private base : number,
+        private altura : number
     ) { }
 
-    alterarBase(base: number) {
+    setBase(base: number) {
         this.base = base;
     }
-    alterarAltura(altura: number){
+    setHeight(altura: number){
         this.altura = altura;
     }
-    valorDaBase() {
+    getBase() {
         return this.base
     }
-    valorDaAltura(){
+    getHeight(){
         return this.altura;
     }
-    areaRetangulo() {
+    calculateArea() {
         return this.base * this.altura;
     }
-    perimetroRetangulo(){
+    calculatePerimeter(){
         return (this.base*2) + (this.altura*2);
     }
 }
-const medidaBase = prompt("Qual o comprimento do cômodo?")
-const medidaAltura = prompt("Qual a largura do cômodo?")
-const retangulo = new Retangulo(medidaBase, medidaAltura);
-console.log("Irá precisar de "+ retangulo.areaRetangulo()+ " m² de piso.")
-console.log("Irá precisar de " + retangulo.perimetroRetangulo()+ "m² de rodapé.")
+const base = prompt("How long is the room?")
+const height = prompt("How wide is the room?")
+const rectangle = new Rectangle(medidaBase, medidaAltura);
+console.log("You will need  "+ rectangle.calculateArea()+ " m² of floor.")
+console.log("You will need " + rectangle.calculatePerimeter()+ "m² of footer.")
