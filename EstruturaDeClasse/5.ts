@@ -12,18 +12,25 @@ alterarNome, depósito e saque; No construtor, saldo é opcional, com valor defa
         this.userName = name;
         return this.userName;
     }
-    deposit (amountdeposited: number) {
+    deposit (amountDeposited: number) {
         this.balance += amountdeposited;
         return this.balance;
     }
-    withdraw (withdrawalamount: number) {
-        this.balance -= withdrawalamount;
-        return this.balance;
+    withdraw (withdrawalAmount: number) {
+        if(this.balance < withdrawAmount || this.balance === 0){
+            return console.log("Don't have enough balance")
+        }else{
+            this.balance -= withdrawAmount;
+            return this.balance;
+        }
     }
 }
 const currentAccont = new CurrentAccont("Gabriel", 5533, 0)
 console.log(currentAccont)
+currentAccont.withdraw(40)
 currentAccont.deposit(90)
 console.log(currentAccont)
 currentAccont.withdraw(40)
+console.log(currentAccont)
+currentAccont.withdraw(60)
 console.log(currentAccont)
