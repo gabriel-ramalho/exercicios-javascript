@@ -6,9 +6,9 @@ um macaco coma o outro. É possível criar um macaco canibal? */
 class Monkey{
     constructor (
         private name : string,
-        private stomach : string [],
+        private stomach : any [],
     ){ }
-    eat(food: string){
+    eat(food: any){
         this.stomach.push(food);
     }
     seeBelly(){
@@ -22,8 +22,8 @@ const monkey1 = new Monkey("Cezar", [])
 const monkey2 = new Monkey("Czar", [])
 monkey1.eat("banana")
 monkey1.seeBelly()
-monkey1.eat("maçã")
-monkey1.eat("kiwi")
+monkey2.eat("maçã")
+monkey1.eat(monkey2)
 monkey1.seeBelly()
 monkey1.digest()
 monkey1.seeBelly()
