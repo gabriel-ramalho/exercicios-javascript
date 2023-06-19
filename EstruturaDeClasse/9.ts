@@ -13,8 +13,8 @@ tipo ponto que indique os valores de x e y para o centro do objeto.
 9)Crie um menu para alterar os valores do retângulo e imprimir o centro deste retângulo. */
 class Point {
     constructor(
-        public x : number,
-        public y : number
+        public x : number = 0,
+        public y : number = 0,
     ) {}
 }
 class Rectangle {
@@ -22,10 +22,23 @@ class Rectangle {
         private width : number,
         private heigth : number
     ) {}
-    center(){
-        let widthX = (this.width)
+    centerwidth(){
+        return (this.width)/2
+    }
+    centerheigth(){
+        return (this.heigth)/2
     }
 }
-function main(){ 
+const point = new Point()
+const rectangle = new Rectangle(8,10)
 
+function centerRectangle(){
+    point.x = rectangle.centerwidth()
+    point.y = rectangle.centerheigth()
+    console.log("The center of the rectangle is X: "+point.x+", Y: "+point.y)    
 }
+
+function main(){ 
+    centerRectangle()
+}
+main()
