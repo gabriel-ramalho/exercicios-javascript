@@ -28,17 +28,12 @@ class Rectangle {
     centerheigth(){
         return (this.heigth)/2
     }
+    centerRectangle(){
+        point.x = rectangle.centerwidth()
+        point.y = rectangle.centerheigth()
+        console.log("The center of the rectangle is X: "+point.x+", Y: "+point.y)    
+    }
 }
 const point = new Point()
 const rectangle = new Rectangle(8,10)
-
-function centerRectangle(){
-    point.x = rectangle.centerwidth()
-    point.y = rectangle.centerheigth()
-    console.log("The center of the rectangle is X: "+point.x+", Y: "+point.y)    
-}
-
-function main(){ 
-    centerRectangle()
-}
-main()
+rectangle.centerRectangle()
