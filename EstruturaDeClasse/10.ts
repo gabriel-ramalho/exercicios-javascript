@@ -15,24 +15,33 @@ class FuelPump{
     constructor (
     private typeOfFuel : string,
     private literValue : number,
-    private fuelQuantity : number,
+    private fuelQuantity : number = 1000,
+    private totalLitters : number = 0
     ){}
     supplyValue(supplyValue: number){
-        return supplyValue/this.literValue
+        this.totalLitters = supplyValue/this.literValue
+        if (this.fuelQuantity > this.totalLitters){
+            this.fuelQuantity -= this.totalLitters
+            console.log("You supply "+this.totalLitters+" litters, and has "+this.fuelQuantity+" litters remaining at the pumps ")
+        }
     }
     supplyLiter(supplyLiter: number){
-        return this.literValue * supplyLiter
+        this.totalLitters = this.literValue * supplyLiter;
+        if(this.fuelQuantity > supplyLiter){
+            this.fuelQuantity -= supplyLiter
+            console.log("You will pay "+this.totalLitters+", and has "+this.fuelQuantity+" litters remaining at the pumps ")
+        }
     }
-    changeValue(){
-
+    changeValue(literValue: number){
+        this.literValue = literValue;
     }
-    changeFuel(){
-
+    changeFuel(typeOfFuel: string){
+        this.typeOfFuel = typeOfFuel;
     }
-    changeFuelQuantity(){
-        
+    changeFuelQuantity(fuelQuantity: number){
+        this.fuelQuantity = fuelQuantity;
     }
 };
-const fuelPump = new FuelPump("gaso", 4, 10)
-console.log(fuelPump.supplyValue(40))
-console.log(fuelPump.supplyLiter(10))
+const fuelPump = new FuelPump("gasoline", 4)
+fuelPump.supplyValue(40)
+fuelPump.supplyLiter(50)
