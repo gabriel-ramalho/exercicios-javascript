@@ -13,14 +13,14 @@ alterarNome, depósito e saque; No construtor, saldo é opcional, com valor defa
         return this.userName;
     }
     deposit (amountDeposited: number) {
-        this.balance += amountdeposited;
+        this.balance += amountDeposited;
         return this.balance;
     }
     withdraw (withdrawalAmount: number) {
-        if(this.balance < withdrawAmount || this.balance === 0){
+        if(this.balance < withdrawalAmount || this.balance === 0){
             return console.log("Don't have enough balance")
         }else{
-            this.balance -= withdrawAmount;
+            this.balance -= withdrawalAmount;
             return this.balance;
         }
     }
